@@ -74,7 +74,7 @@ function LobbyView(props) {
         <div className='flex flex-col justify-start items-center w-full h-full overflow-hidden'>
             <div className='absolute top-3 right-3 p-3 text-3xl' onClick={openQRCode}><HiQrCode /></div>
             <div className='flex flex-col justify-start items-center text-title p-4 w-full'>
-                <h2 className='text-primary text-lg'>KABOOM</h2>
+                <h2 className='text-primary text-lg'>DR. KABOOM</h2>
                 <h1 className='text-secondary text-4xl skew font-extrabold'>{code}</h1>
             </div>
             <div className='overflow-y-scroll overflow-x-hidden w-full scrollbar-hide flex flex-col items-center' >
@@ -558,12 +558,6 @@ function HostLobby({ me, code }) {
                 <button onClick={(devMode ? promptStartGame : startGame)} className={'w-full btn  text-title' + (startCondition ? " btn-primary  " : " btn-disabled ")} >Start game</button>
                 <button className='link font-bold clickable' onClick={() => closeRoom()}>Close room</button>
 
-            </div>
-            <div className=' w-full max-w-2xl p-4 py-2 flex flex-col items-start'>
-                <h1 className='font-extrabold text-lg uppercase flex items-center gap-2'>Selected Playset <Info tooltip="Playsets are predetermined decks of cards, that will be distributed among players. They often change the feel of the entire game, so choose wisely." /></h1>
-                {wrongPlayerNumber && <WrongPlayerNumberPlayset />}
-                <PlaysetDisplay forceOpen selected onClick={() => showAllPlaysets()} playset={playset} />
-                <PlayWithBuryToggle recommendBury={recommendBury} bury={(playWithBury) && !playset?.no_bury} onChange={bury => setPlayWithBury(bury)} disabled={ playset?.no_bury || playset?.force_bury} />
             </div>
 
             <LobbyFooter />

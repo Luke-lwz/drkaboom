@@ -28,8 +28,8 @@ export function PlayerRow({ name, id, onClick, element, conn, me, showId, showOn
                 <div className="grow flex items-center justify-start gap-2">
                     {showOnline && <OnlineStatus online={conn || id === "HOST"} />}
                     {showId && <div className={'label w-fit flex items-center justify-center label-primary text-primary-content rounded-md px-2 py-1 text-xs text-normal skew ' + (id === "HOST" ? " bg-primary " : " bg-primary ")}>{id}</div>}
-                    {me && me?.id === id && <div className={'label w-fit flex items-center justify-center label-primary text-primary-content rounded-md px-2 py-1 text-xs text-normal skew bg-info '}>YOU</div>}
-                    {ready && <div className='label flex items-center justify-center label-secondary bg-success text-secondary-content rounded-md px-2 py-1 text-xs text-normal skew'>READY</div>}
+                    {me && me?.id === id && <div className={'label w-fit flex items-center justify-center label-primary text-white rounded-md px-2 py-1 text-xs text-normal skew bg-info '}>YOU</div>}
+                    {ready && <div className='label flex items-center justify-center label-secondary bg-success text-white rounded-md px-2 py-1 text-xs text-normal skew'>READY</div>}
                     {element}
                 </div>
             </div>

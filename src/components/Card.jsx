@@ -213,7 +213,7 @@ export function CardBack({ onClick = () => { }, color, allowColorReveal }) {
                 <div className='text-title text-base-100 text-5xl scale-[150%] h-full w-full flex justify-center items-center overflow-hidden -rotate-[5deg] relative '>
                     <div className="scrolling-image w-full h-full overflow-hidden" />
                     <div className="absolute inset-0 bg-black/20 flex items-center justify-center rotate-[5deg] text-title text-xl overflow-hidden ">
-                        <h1 className="logo-gradient-neutral w-full h-1/2 flex items-center justify-center overflow-hidden">KABOOM</h1>
+                        <h1 className="logo-gradient-neutral w-full h-1/2 flex items-center text-white justify-center overflow-hidden">KABOOM</h1>
                     </div>
                 </div>
             </motion.div>
